@@ -1,134 +1,314 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sw" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ibrahim Garden Tours | Kilimanjaro & Safari</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Swiper.js CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-  <!-- Swiper.js JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-</head>
-<body class="bg-white text-gray-800">
-
-<!-- Hero Section -->
-<section class="bg-cover bg-center" style="background-image: url('https://i.ibb.co/ymrMdS6M/Serengeti-National-Park-027-2x.jpg'); width: 360px; height: 200px;">
-  <div class="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center text-center px-4">
-    <h1 class="text-xl md:text-2xl font-bold text-white mb-2">Discover Unforgettable Adventures</h1>
-    <p class="text-sm md:text-lg text-white mb-4">Explore Tanzania's Stunning Landscapes</p>
-    <a href="mailto:Safariskilimanjaro02@gmail.com" class="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700 transition">Book Your Safari Now</a>
-  </div>
-</section>
-
-<!-- Image Slider BELOW Hero Section -->
-<section class="flex justify-center bg-gray-100 py-8">
-  <div class="swiper mySwiper w-[300px] h-[200px]">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/5hK7BymY/banner-kilimanjaro-6-1.png" class="w-full h-full object-cover" alt="Slide 1" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/N2qnqk1T/safari-1.png" class="w-full h-full object-cover" alt="Slide 2" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/9kpBXm8F/banner-kilimanjaro-7.png" class="w-full h-full object-cover" alt="Slide 3" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://i.ibb.co/rhsdJb0/20250707-132721.png" class="w-full h-full object-cover" alt="Slide 4" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Swiper JS Init -->
-<script>
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-  });
-</script>
-
-<!-- About Us -->
-<section class="py-12 px-4 md:px-24 text-center">
-  <h2 class="text-3xl font-bold mb-4">About Us</h2>
-  <p class="text-gray-600 max-w-2xl mx-auto">Welcome to Ibrahim Garden Hostel Safari, your trusted partner in unforgettable African adventures. We are a passionate team of professional tour operators dedicated to showcasing the natural beauty, culture, and hidden treasures of Tanzania and East Africa.
-
-With years of experience in organizing personalized safaris, Kilimanjaro climbs, cultural tours, and beach holidays, we pride ourselves on offering authentic experiences that create lifelong memories. Our mission is to ensure every guest feels safe, inspired, and deeply connected to the destinations we explore together.
-
-At Ibrahim Garden Hostel Safari, we believe travel is not just about visiting new places, but about meaningful connections with people, wildlife, and landscapes. We guarantee exceptional service, knowledgeable local guides, and seamless travel planning from the moment you contact us to your journey back home.
-
-Join us today and discover Africa’s breathtaking beauty with a team that truly cares about your dreams.</p>
-</section>
-
-<!-- Packages -->
-<section id="packages" class="py-12 px-4 md:px-24 bg-gray-100">
-  <h2 class="text-3xl font-bold text-center mb-10">Our Safari & Trekking Packages</h2>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Tazama Utamu Upwiru Tam Tam</title>
   
-  <div class="grid md:grid-cols-3 gap-8">
-    <!-- Machame Route -->
-    <div class="bg-white shadow rounded-lg overflow-hidden">
-      <img src="https://i.ibb.co/9kcH4rnQ/images-45.jpg" alt="Kilimanjaro Route" class="w-full h-56 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2">Kilimanjaro Route</h3>
-        <p class="text-gray-600 mb-4">At Ibrahim Garden Hostel  Safari, we extend a warm invitation to embark on a journey of a lifetime with us. We're not just a travel company; we're dream weavers, dedicated to turning your wildest adventures into unforgettable realities. Imagine traversing the sprawling savannahs of Tanzania, encountering majestic wildlife, or standing triumphantly at the summit of Mount Kilimanjaro. With our seasoned team of experts by your side, every step of your journey is guided by experience and passion. </p>
-        <a href="mailto:Safariskilimanjaro02@gmail.com" class="bg-green-600 text-white px-4 py-2 rounded">Book Now</a>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              blue: '#2563EB', /* Blue inayofanana na picha */
+              dark: '#020617',
+              card: '#0F172A',
+              light: '#F8FAFC'
+            }
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+
+    /* Glass Effect */
+    .glass {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Phone Frame CSS */
+    .phone-frame {
+      border: 12px solid #1e293b;
+      border-radius: 35px;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      aspect-ratio: 9/19.5;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+    .phone-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 20px;
+      background: #1e293b;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      z-index: 20;
+    }
+
+    /* Mesh Background */
+    .mesh-bg {
+      background-color: #020617;
+      background-image: 
+        radial-gradient(at 0% 0%, hsla(220,100%,50%,0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(210,100%,50%,0.1) 0px, transparent 50%);
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+      z-index: 100;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #128c7e;
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-white overflow-x-hidden selection:bg-brand-blue selection:text-white">
+
+  <a href="https://wa.me/255798250398?text=Habari%20Nahitaji%20App%20ya%20DStv%20Chapu" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <nav class="fixed w-full z-50 glass border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="https://files.catbox.moe/rrbm5w.png" class="w-8 h-8 md:w-10 md:h-10 rounded-lg shadow-lg" alt="Logo">
+        <span class="text-lg md:text-xl font-bold tracking-tight">Mapenzi<span class="text-brand-blue">App</span></span>
+      </div>
+      <a href="#download" class="md:hidden bg-brand-blue text-white px-4 py-1.5 rounded-full text-xs font-bold">
+        Download
+      </a>
+      <a href="#download" class="hidden md:flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 transition px-5 py-2 rounded-full font-medium text-sm">
+        <i class="fab fa-android text-blue-400"></i> APK v4.0
+      </a>
+    </div>
+  </nav>
+
+  <section class="relative pt-24 pb-12 md:pt-32 md:pb-20 mesh-bg min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
+      
+      <div class="text-center lg:text-left order-1">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-xs font-semibold mb-4 animate-fade-in">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-blue"></span>
+          </span>
+          Live Streaming
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-4">
+          Upwiru, <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">Utamu Kiganjani.</span>
+        </h1>
+        
+        <p class="text-gray-400 text-base md:text-lg mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Tazama video za Utamu Upwiru Kishwaa💋.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-8 lg:mb-12">
+          <a href="https://github.com/hassanal100/UpwiruApp/raw/refs/heads/main/Mapenzi%20Club.apk" 
+             class="group relative px-8 py-3.5 bg-gradient-to-r from-brand-blue to-blue-700 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all hover:-translate-y-1 overflow-hidden w-full sm:w-auto animate-pulse-slow" download>
+            <div class="absolute inset-0 bg-white/10 group-hover:translate-x-full transition-transform duration-500 skew-x-12 -ml-4"></div>
+            <div class="flex items-center justify-center gap-3">
+              <i class="fas fa-download"></i>
+              <span>Download App</span>
+            </div>
+          </a>
+          <a href="https://wa.me/255746956012?text=Habari%20Nahitaji%20App%20ya%20Mapenzi%20Club" class="hidden sm:flex px-8 py-3.5 glass rounded-xl font-semibold hover:bg-white/5 transition items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-green-400"></i> Tucheki WhatsApp
+          </a>
+        </div>
+
+        <div class="hidden sm:flex items-center justify-center lg:justify-start gap-8 text-sm text-gray-400 border-t border-white/5 pt-6">
+          <div class="flex flex-col">
+            <span class="text-xl font-bold text-white">1M+</span>
+            <span class="text-xs">Users</span>
+          </div>
+          <div class="w-px h-6 bg-white/10"></div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold text-white">4.8</span>
+            <span class="text-xs">Rating</span>
+          </div>
+          <div class="w-px h-6 bg-white/10"></div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold text-white">Free</span>
+            <span class="text-xs">Forever</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-2 lg:order-2 relative z-10 animate-float">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[500px] bg-brand-blue/20 blur-[80px] -z-10"></div>
+        
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="swiper mySwiper h-full w-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://files.catbox.moe/k535x2.jpg" class="w-full h-full object-cover"></div>
+              <div class="swiper-slide"><img src="https://files.catbox.moe/k5hd6u.jpg" class="w-full h-full object-cover"></div>
+              <div class="swiper-slide"><img src="https://files.catbox.moe/x2o41i.jpg" class="w-full h-full object-cover"></div>
+              <div class="swiper-slide"><img src="https://files.catbox.moe/45i5bv.jpg" class="w-full h-full object-cover"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Machame Route -->
-    <div class="bg-white shadow rounded-lg overflow-hidden">
-      <img src="https://i.ibb.co/PZwD1gXz/banner-kilimanjaro-2-1.png" alt="Lemosho Route" class="w-full h-56 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2">Machame Route</h3>
-        <p class="text-gray-600 mb-4">7 Days | 6 Nights
-       Tour Overview
-Embark on an exhilarating 6-day journey to the summit of Mount Kilimanjaro via the Machame Route, commonly known as the "Whiskey Route." Renowned for its stunning scenery and diverse landscapes, this route presents a challenging yet highly rewarding adventure for trekkers. Beginning in the lush rainforest at the base, the Machame Route traverses multiple climatic zones, offering breathtaking views and unique ecosystems along the way. With gradual acclimatization and expert guidance, this climb enhances your chances of reaching Uhuru Peak, the highest point in Africa.</p>
-        <a href="mailto:Safariskilimanjaro02@gmail.com" class="bg-green-600 text-white px-4 py-2 rounded">Book Now</a>
+  <section id="features" class="py-20 bg-brand-dark relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold mb-3">Kila Kitu Kiganjani</h2>
+        <p class="text-gray-400">App bora zaidi kwa wapenzi wa Utamu.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass p-6 rounded-2xl hover:bg-brand-blue/5 transition duration-300 group">
+          <div class="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue text-xl mb-4 group-hover:scale-110 transition">
+            <i class="fas fa-futbol"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Live Sports</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Tazama Utamu Kiganjani Kwako Tafuta Marafiki Tanzania.</p>
+        </div>
+
+        <div class="glass p-6 rounded-2xl hover:bg-brand-blue/5 transition duration-300 group">
+          <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:scale-110 transition">
+            <i class="fas fa-tv"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">6000+ Connections</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Tazama Video na Live muda wotee.</p>
+        </div>
+
+        <div class="glass p-6 rounded-2xl hover:bg-brand-blue/5 transition duration-300 group">
+          <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 text-xl mb-4 group-hover:scale-110 transition">
+            <i class="fas fa-film"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Movies & Wakubwa</h3>
+          <p class="text-gray-400 text-sm leading-relaxed"Connection zote zinapatika hapa muda wote.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Marangu Route -->
-    <div class="bg-white shadow rounded-lg overflow-hidden">
-      <img src="https://i.ibb.co/rhsdJb0/20250707-132721.png" alt="Marangu Route" class="w-full h-56 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2">Marangu Route</h3>
-        <p class="text-gray-600 mb-4">Tour Overview
-Embark on a 6-day journey to the summit of Mount Kilimanjaro via the Marangu Route, the only route with hut accommodations, providing a more comfortable trekking experience. Known as the "Coca-Cola Route," Marangu offers diverse landscapes, from lush rainforests to alpine deserts. This extended itinerary includes an extra acclimatization day, improving your chances of reaching Uhuru Peak, Africa's highest point. With expert guides and a well-structured plan, this adventure is perfect for trekkers seeking a balanced and scenic climb.</p>
-        <a href="mailto:Safariskilimanjaro02@gmail.com" class="bg-green-600 text-white px-4 py-2 rounded">Book Now</a>
+  <section class="py-16 bg-brand-card/50 border-y border-white/5">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <div class="flex-1">
+          <h2 class="text-2xl font-bold mb-6">Jinsi ya Ku-install (APK)</h2>
+          <div class="space-y-5">
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-blue flex items-center justify-center font-bold text-sm shrink-0">1</div>
+              <div>
+                <h4 class="font-bold mb-1">Download APK</h4>
+                <p class="text-gray-400 text-sm">Bonyeza kitufe cha 'Download' na subiri imalize.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-card border border-white/20 flex items-center justify-center font-bold text-sm shrink-0">2</div>
+              <div>
+                <h4 class="font-bold mb-1">Ruhusu Installation</h4>
+                <p class="text-gray-400 text-sm">Ruhusu "Install from Unknown Sources" kwenye settings.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-card border border-white/20 flex items-center justify-center font-bold text-sm shrink-0">3</div>
+              <div>
+                <h4 class="font-bold mb-1">Fungua App</h4>
+                <p class="text-gray-400 text-sm">Install na anza kufurahia burudani bure!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 w-full text-center p-8 glass rounded-2xl border border-dashed border-white/10">
+          <i class="fas fa-shield-virus text-5xl text-blue-400 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">100% Salama</h3>
+          <p class="text-gray-400 text-sm mb-6">Faili hili limekaguliwa na halina virusi vyovyote.</p>
+          <a href="https://github.com/hassanal100/UpwiruApp/raw/refs/heads/main/Mapenzi%20Club.apk" class="text-brand-blue hover:underline font-medium" id="download">Download APK Now</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Call to Action -->
-<section class="py-12 bg-green-600 text-white text-center">
-  <h2 class="text-3xl font-bold mb-4">Ready to Start Your Adventure?</h2>
-  <a href="mailto:Safariskilimanjaro02@gmail.com" class="bg-white text-green-600 px-6 py-3 rounded-full text-lg">Book Now</a>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-gray-300 py-8">
-  <div class="container mx-auto text-center">
-    <img src="https://i.ibb.co/yB4GB1kt/IMG-20250707-WA0007-1.jpg" alt="Ibrahim Garden Hostel" class="mx-auto mb-4 w-24">
-    <p>Contact us: +255 655 474 440 | Safariskilimanjaro02@gmail.com</p>
-    <div class="flex justify-center space-x-4 mt-4">
-      <a href="#"><img src="https://i.ibb.co/F4Vh5CQV/download-64.png" class="w-6"></a>
-      <a href="#"><img src="https://i.ibb.co/WWRcqFsB/download-66.png" class="w-6"></a>
-      <a href="#"><img src="https://i.ibb.co/6Jv6Dwnq/download-67.png" class="w-6"></a>
+  <footer class="py-8 bg-brand-dark border-t border-white/5 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex justify-center items-center gap-2 mb-4">
+        <img src="https://files.catbox.moe/rrbm5w.png" class="w-6 h-6 rounded opacity-80" alt="Logo">
+        <span class="font-bold text-base text-white/80">DStv Chapu</span>
+      </div>
+      <div class="text-gray-600 text-xs">
+        &copy; 2026 Mapenzi Club. All Rights Reserved.
+      </div>
     </div>
-    <p class="mt-4">&copy; 2025 Ibrahim Garden Tours. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/255655474440" target="_blank" class="fixed bottom-4 left-4 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg flex items-center space-x-2">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M20.52 3.48A11.77 11.77 0 0012 0C5.37 0 .11 5.27.11 11.79c0 2.08.55 4.13 1.6 5.92L0 24l6.42-1.68a11.89 11.89 0 005.57 1.42h.01c6.63 0 11.99-5.27 11.99-11.79 0-3.15-1.25-6.12-3.47-8.45zm-8.52 19.09h-.01a10.14 10.14 0 01-5.15-1.42l-.37-.22-3.81 1 1-3.71-.24-.38a9.88 9.88 0 01-1.55-5.3C2.97 6.1 7.02 2.1 12 2.1c2.68 0 5.2 1.04 7.07 2.92a9.9 9.9 0 012.93 7c0 5.46-4.45 9.91-9.99 9.91zm5.51-7.44c-.3-.15-1.76-.86-2.03-.95-.27-.1-.47-.15-.66.15s-.76.95-.93 1.14c-.17.2-.34.22-.63.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.51-1.79-1.68-2.09-.17-.3-.02-.46.13-.6.13-.13.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.61-.9-2.21-.24-.6-.48-.52-.66-.52h-.56c-.2 0-.52.07-.8.37s-1.05 1.03-1.05 2.5 1.08 2.89 1.23 3.09c.15.2 2.13 3.26 5.17 4.57.72.31 1.29.5 1.73.64.73.23 1.4.2 1.93.12.59-.09 1.76-.72 2.01-1.42.25-.69.25-1.28.17-1.42-.07-.15-.27-.22-.56-.37z"/></svg>
-  <span>Chat with us</span>
-</a>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      spaceBetween: 0,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      effect: "fade", 
+    });
+  </script>
 </body>
-</html>
+                                          </html>
+                  
+                  
